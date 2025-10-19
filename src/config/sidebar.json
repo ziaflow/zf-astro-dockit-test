@@ -1,0 +1,70 @@
+{
+  "main": [
+    {
+      "label": "Getting Started",
+      "translations": {
+        "de": "Erste Schritte"
+      },
+      "items": [
+        {
+          "label": "[seti:vite] Introduction",
+          "translations": {
+            "de": "[seti:vite] Introductie"
+          },
+          "autogenerate": { "directory": "getting-started/introduction" }
+        },
+        {
+          "label": "[setting] Global Settings",
+          "translations": {
+            "de": "[setting] Globale instellingen"
+          },
+          "autogenerate": { "directory": "getting-started/global-settings" }
+        },
+        {
+          "label": "[seti:plan] Navigation",
+          "translations": {
+            "de": "[seti:plan] Navigatie"
+          },
+          "slug": "getting-started/navigation"
+        }
+      ]
+    },
+    {
+      "label": "Content",
+      "translations": {
+        "de": "Inhoud"
+      },
+      "items": [
+        {
+          "label": "[document] Components and Block",
+          "translations": {
+            "de": "[document] Componenten en blokken"
+          },
+          "autogenerate": { "directory": "contents/components" }
+        },
+        {
+          "label": "[pencil] Editing Content",
+          "translations": {
+            "de": "[pencil] Content bewerken"
+          },
+          "autogenerate": { "directory": "contents/editing" }
+        }
+      ]
+    },
+    {
+      "label": "Reference",
+      "translations": {
+        "de": "Referentie"
+      },
+      "autogenerate": { "directory": "reference" }
+    },
+
+    {
+      "label": "Configurations",
+      "translations": {
+        "de": "Configuraties"
+      },
+      "autogenerate": { "directory": "configurations" }
+    }
+  ]
+}

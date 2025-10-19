@@ -1,0 +1,223 @@
+---
+title: DocKit
+description: Begin met het bouwen van je documentatiesite met DocKit.
+template: splash
+hero:
+  title: |
+    Geweldige <span data-icon-path='hero-icon.svg'></span> docs
+    <span class="light-text">waar developers van houden</span>
+  tagline: Ontdek tips, bronnen en begeleiding om je ervaring met DocKit te maximaliseren.
+---
+
+import Section from "~/components/Section.astro";
+import Card from "~/components/user-components/NewCard.astro";
+import Grid from "~/components/user-components/Grid.astro";
+
+<Section title="Krachtige functionaliteiten
+<span class='light-text'>voor documentatie</span>" description="Ontdek de tools en ontwerpkeuzes die documentatie efficiënt maken.">
+
+<Grid columns={4}>
+  <Card title="Goed georganiseerd" icon="substack" iconColor="#FF8585">
+    De transparantie van onze gegevens helpt je de geïnformeerde beslissingen te nemen die je nodig hebt.
+  </Card>
+  <Card title="Andere functie" icon="seti:vite" iconColor="#7BE1A4">
+   De transparantie van onze gegevens helpt je de geïnformeerde beslissingen te nemen die je nodig hebt.
+  </Card>
+
+<Card title="Bekijk dit eens" icon="seti:code-search" iconColor="#FFD97B">
+  De transparantie van onze gegevens helpt je de geïnformeerde beslissingen
+  te nemen die je nodig hebt.
+</Card>
+<Card title="Andere functie" icon="seti:config" iconColor="#979BFF">
+  De transparantie van onze gegevens helpt je de geïnformeerde beslissingen
+  te nemen die je nodig hebt.
+</Card>
+
+</Grid>
+</Section>
+
+import HeroTabs from "~/components/HeroTabs.astro";
+import HeroTabsItem from "~/components/HeroTabsItem.astro";
+
+<Section
+  title="Kom snel op gang <span class='light-text'>in slechts 3 eenvoudige stappen</span>"
+  description="Een snelle en frustratie-vrije manier om je documentatie op te zetten en te starten."
+>
+  <HeroTabs>
+    <HeroTabsItem
+      title="Installeer ons template"
+      subtitle="Stel in binnen enkele seconden op met ons template."
+      number={1}
+      image="/src/assets/step-1.png"
+      imageAlt="Stap 1 afbeelding"
+    />
+    <HeroTabsItem
+      title="Importeer wat je nodig hebt"
+      subtitle="Breng componenten of functies in je projecten."
+      number={2}
+      image="/src/assets/step-2.png"
+      imageAlt="Stap 2 afbeelding"
+    />
+    <HeroTabsItem
+      title="Start documentatie"
+      subtitle="Begin direct met het documenteren van je project."
+      number={3}
+      image="/src/assets/step-1.png"
+      imageAlt="Stap 3 afbeelding"
+    />
+  </HeroTabs>
+</Section>
+
+import ListCard from "~/components/user-components/ListCard.astro";
+import LinkButton from "~/components/LinkButton.astro";
+
+<Section title="Uitgelichte onderwerpen voor <span class='light-text'>onze documentatie</span>" description="Ontdek onze uitgelichte onderwerpen en krijg een idee van onze mogelijkheden.">
+
+<Grid columns={3}>
+<ListCard title="Elementen" imageIcon="/src/assets/element.svg" number="12">
+- Algemeen
+- Codeblokken
+- Aanmeldingsformulier
+- Services en Functies met Vormen
+- Integraties Zonnestelsel
+- Account Herstel Doc
+
+<LinkButton href="/getting-started/introduction/overview/" variant="text" className="mt-6 mb-8 ml-4">Bekijk alle onderwerpen</LinkButton>
+</ListCard>
+
+<ListCard title="Inhoud" imageIcon="/src/assets/content.svg" number="12">
+- Algemeen
+- Codeblokken
+- Aanmeldingsformulier
+- Services en Functies met Vormen
+- Integraties Zonnestelsel
+- Account Herstel Doc
+
+<LinkButton href="/getting-started/introduction/overview/" variant="text" className="mt-6 mb-8 ml-4">Bekijk alle onderwerpen</LinkButton>
+</ListCard>
+
+<ListCard title="Lay-outs" imageIcon="/src/assets/layouts.svg" number="12">
+- Algemeen
+- Codeblokken
+- Aanmeldingsformulier
+- Services en Functies met Vormen
+- Integraties Zonnestelsel
+- Account Herstel Doc
+
+<LinkButton href="/getting-started/introduction/overview/" variant="text" className="mt-6 mb-8 ml-4">Bekijk alle onderwerpen</LinkButton>
+</ListCard>
+</Grid>
+
+<Grid columns={3}>
+
+<ListCard title="Codeblokken" imageIcon="/src/assets/code-block.svg" number="12" image="/src/assets/code-image.png">
+
+- Algemeen
+- Codeblokken
+- Aanmeldingsformulier
+- Services en Functies met Vormen
+- Integraties Zonnestelsel
+- Account Herstel Doc
+
+<LinkButton
+  href="/getting-started/introduction/overview/"
+  variant="text"
+  className="mt-6 mb-8 ml-4"
+>
+  Bekijk alle onderwerpen
+</LinkButton>
+
+</ListCard>
+
+<ListCard title="Wijzigingslogboeken" imageIcon="/src/assets/changelogs.svg" number="12">
+
+- Algemeen
+- Codeblokken
+- Aanmeldingsformulier
+- Services en Functies met Vormen
+- Integraties Zonnestelsel
+- Account Herstel Doc
+
+<LinkButton
+  href="/getting-started/introduction/overview/"
+  variant="text"
+  className="mt-6 mb-8 ml-4"
+>
+  Bekijk alle onderwerpen
+</LinkButton>
+
+</ListCard>
+
+</Grid>
+ 
+</Section>
+
+import ThemeDemo from "~/components/ThemeDemo.astro";
+
+<Section
+  title="Schakel eenvoudig tussen <span class='light-text'>donkere/lichte modus</span>"
+  description="Speciale schakelknop om te wisselen tussen donkere en lichte modus."
+>
+
+<ThemeDemo
+  darkImage="/src/assets/darkmode-demo.png"
+  lightImage="/src/assets/lightmode-demo.png"
+/>
+
+</Section>
+
+import AccordionContainer from "~/components/AccordionContainer.astro";
+import Accordion from "~/components/Accordion.astro";
+
+<Section
+  title="Have question? <span class='light-text'>We’re here to help</span>"
+  description="Get answers to the general questions people have asked."
+>
+
+<AccordionContainer tabList={
+  [
+    {
+      type: 'basic',
+      title: 'Aan de Slag',
+      subtitle:'Enkele vragen over hoe te beginnen.',
+      icon: "rocket"
+
+    },
+    {
+      type: 'setting',
+      title: 'Instellingen & Configuraties',
+      subtitle:'Hoe onze documentatie te configureren.',
+      icon: "settings"
+
+    },
+    {
+      type: 'help',
+      title: 'Hulp & Ondersteuning',
+      subtitle:'Welk type ondersteuning wij bieden.',
+      icon: "support"
+
+    }
+
+]
+}>
+
+<Accordion question="Hoe kom ik aan de slag met Dockit?" answer="Installeer eenvoudig ons template, importeer de componenten die je nodig hebt, en begin met het documenteren van je project. Het installatieproces duurt slechts een paar minuten." type="basic" />
+<Accordion question="Wat zijn de systeemvereisten?" answer="Dockit vereist Node.js 18+ en werkt met elke moderne webbrowser. Het is gebouwd op Astro en ondersteunt alle belangrijke besturingssystemen." type="basic" />
+<Accordion question="Is Dockit gratis te gebruiken?" answer="Ja, Dockit is volledig gratis en open source. Je kunt het gebruiken voor persoonlijke en commerciële projecten zonder enige beperkingen." type="basic" />
+<Accordion question="Kan ik het ontwerp aanpassen?" answer="Absoluut! Dockit is zeer aanpasbaar met Tailwind CSS. Je kunt kleuren, lay-outs, componenten wijzigen en je eigen branding toevoegen." type="basic" />
+
+<Accordion question="Hoe wijzig ik de themakleuren?" answer="Je kunt themakleuren aanpassen door de CSS-eigenschappen in je themaconfiguratiefile te wijzigen of via de Tailwind-configuratie." type="setting" />
+<Accordion question="Kan ik aangepaste componenten toevoegen?" answer="Ja, je kunt aangepaste Astro-componenten maken en toevoegen. Plaats ze eenvoudig in de componenten-map en importeer ze waar nodig." type="setting" />
+<Accordion question="Hoe configureer ik de navigatie?" answer="Navigatie wordt geconfigureerd via het menu.json-bestand in je config-map. Je kunt menu-items toevoegen, verwijderen of herordenen zoals nodig." type="setting" />
+<Accordion question="Kan ik mijn eigen domein gebruiken?" answer="Ja, je kunt Dockit implementeren op elke hostingservice en je aangepaste domein gebruiken. We bieden implementatiehandleidingen voor populaire platforms." type="setting" />
+
+
+<Accordion question="Waar kan ik hulp krijgen?" answer="Je kunt hulp krijgen via onze GitHub-discussies, documentatie of community Discord-server. We bieden ook e-mailondersteuning voor complexe problemen." type="help" />
+<Accordion question="Hoe rapporteer ik bugs?" answer="Rapporteer bugs via onze GitHub issues-pagina met gedetailleerde informatie over het probleem en stappen om het te reproduceren." type="help" />
+<Accordion question="Bieden jullie premium ondersteuning?" answer="Hoewel Dockit gratis is, bieden wij premium consultingservices voor aangepaste implementaties en enterprise-implementaties." type="help" />
+
+</AccordionContainer>
+
+</Section>
+
+

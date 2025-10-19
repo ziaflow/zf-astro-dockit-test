@@ -1,0 +1,100 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Documentatie",
+      "url": "/de/getting-started/introduction/overview/"
+    },
+    {
+      "name": "Referentie",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Configuratie",
+          "url": "/de/reference/configuration/"
+        },
+        {
+          "name": "Plugins referentie",
+          "url": "/de/reference/plugin/"
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "community": {
+      "title": "Word lid van onze community",
+      "links": [
+        {
+          "name": "GitHub discussies",
+          "url": "https://github.com/themefisher/dockit/discussions"
+        },
+        {
+          "name": "Discord community",
+          "url": "/"
+        },
+        {
+          "name": "Twitter updates",
+          "url": "/"
+        },
+        {
+          "name": "Bijdragen gids",
+          "url": "/"
+        }
+      ]
+    },
+    "help_links": {
+      "title": "Handige links",
+      "links": [
+        {
+          "name": "Aan de slag",
+          "url": "/"
+        },
+        {
+          "name": "API referentie",
+          "url": "/"
+        },
+        {
+          "name": "Voorbeelden & demo's",
+          "url": "/"
+        },
+        {
+          "name": "Thema aanpassingen",
+          "url": "/"
+        },
+        {
+          "name": "Probleemoplossing",
+          "url": "/"
+        }
+      ]
+    },
+    "company": {
+      "title": "Bronnen",
+      "links": [
+        {
+          "name": "Documentatie hub",
+          "url": "/docs/"
+        },
+        {
+          "name": "Thema galerij",
+          "url": "/"
+        },
+        {
+          "name": "Beste praktijken",
+          "url": "/"
+        },
+        {
+          "name": "Prestatie tips",
+          "url": "/"
+        },
+        {
+          "name": "Migratie gids",
+          "url": "/"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,95 @@
+---
+title: Overzicht
+description: Een introductie tot DocKit en zijn belangrijkste functies voor het bouwen van mooie documentatiesites.
+---
+
+DocKit docs worden gerenderd vanuit MDX bestanden gedefinieerd als onze starter kits.
+
+![Een raket in de ruimte](/overview.png)
+
+import Grid from "~/components/user-components/Grid.astro";
+import Card from "~/components/user-components/NewCard.astro";
+
+<Grid columns={2}>
+  <Card title="Goed georganiseerd" icon="rocket" iconColor="#FF8585" size='sm' >
+    De transparantie van onze data helpt je de geïnformeerde beslissingen te nemen die je nodig hebt.
+  </Card>
+  <Card title="Andere functie" icon="seti:json" iconColor="#7BE1A4" size='sm'>
+   De transparantie van onze data helpt je de geïnformeerde beslissingen te nemen die je nodig hebt.
+  </Card>
+</Grid>
+
+---
+
+## Begin met een idee
+
+DocKit docs worden gerenderd vanuit MDX bestanden en configuraties gedefinieerd als onze starter kits. We gebruiken GitHub om je docs te integreren met je code en maken source control moeiteloos. Ga aan boord via het dashboard of kloon onze starter kit om te beginnen.
+
+## Itereer snel door product te bouwen
+
+In plaats van onze componenten te distribueren als npm packages bieden we alle broncode direct voor je project. Dit geeft je:
+
+- Volledige controle over de implementatie
+- Mogelijkheid om componenten aan te passen aan je behoeften
+- Geen wachten op package updates of nieuwe releases
+- Directe toegang om stijlen en gedrag te wijzigen
+
+## We zijn gebouwd voor development
+
+DocKit docs worden gerenderd vanuit MDX bestanden en configuraties gedefinieerd als onze starter kits. We gebruiken GitHub om je docs te integreren met je code en maken source control moeiteloos. Ga aan boord via het dashboard of kloon onze starter kit om te beginnen.
+
+```js
+// astro.config.mjs
+import { defineConfig } from 'astro/config';
+import starlight from '@astrojs/starlight';
+
+export default defineConfig({
+	integrations: [
+		starlight({
+			title: 'Mijn geweldige docs site',
+		}),
+	],
+});
+```
+
+## Pull request pagina lijsten
+
+In plaats van onze componenten te distribueren als npm packages bieden we alle broncode direct voor je project. Dit geeft je:
+
+- **/blog/** - Bevat de blog Markdown bestanden. Je kunt de directory verwijderen als je de blog plugin hebt uitgeschakeld, of je kunt de naam wijzigen na het instellen van de path optie. Meer details zijn te vinden in de blog gids.
+
+- **/docs/** - Bevat de Markdown bestanden voor de docs. Pas de volgorde van de docs zijbalk aan in sidebars.js je kunt de directory verwijderen als je de docs plugin hebt uitgeschakeld, of je kunt de naam wijzigen na het instellen van path optie.
+
+- **/src/pages** - Elk JSX/TSX/MDX bestand binnen deze directory wordt omgezet in een website pagina. Meer details zijn te vinden in de pagina's gids.
+
+- **/sidebars.js** - Gebruikt door de documentatie om de volgorde van documenten in de zijbalk te specificeren.
+
+## Aangepaste code versies
+
+DocKit docs worden gerenderd vanuit MDX bestanden en configuraties gedefinieerd als onze starter kits. We gebruiken GitHub om je docs te integreren met je code en maken source control moeiteloos. Ga aan boord via het dashboard of kloon onze starter kit om te beginnen.
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+<Tabs syncKey="pkg">
+<TabItem label="npm">
+
+```sh
+npm create astro@latest -- --template starlight
+```
+
+</TabItem>
+<TabItem label="pnpm">
+
+```sh
+pnpm create astro --template starlight
+```
+
+</TabItem>
+<TabItem label="Yarn">
+
+```sh
+yarn create astro --template starlight
+```
+
+</TabItem>
+</Tabs>
