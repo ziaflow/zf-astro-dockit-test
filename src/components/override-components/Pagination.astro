@@ -1,4 +1,5 @@
 ---
+import { plainLabel } from "@/lib/utils/textConverter";
 import { Icon } from "@astrojs/starlight/components";
 
 const { dir, pagination } = Astro.locals.starlightRoute;
@@ -14,7 +15,7 @@ const isRtl = dir === "rtl";
         <span>
           <span class="link-head"> {Astro.locals.t("page.previousLink")}</span>
           <br />
-          <span class="link-title">{prev.label.replace(/\[.*?\]/g, "")}</span>
+          <span class="link-title">{plainLabel(prev.label)}</span>
         </span>
       </a>
     )
@@ -26,7 +27,7 @@ const isRtl = dir === "rtl";
         <span>
           <span class="link-head">{Astro.locals.t("page.nextLink")}</span>
           <br />
-          <span class="link-title">{next.label.replace(/\[.*?\]/g, "")}</span>
+          <span class="link-title">{plainLabel(next.label)}</span>
         </span>
       </a>
     )

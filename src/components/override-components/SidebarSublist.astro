@@ -3,6 +3,7 @@ import { Icon } from "@astrojs/starlight/components";
 import { Badge } from "@astrojs/starlight/components";
 import SidebarRestorePoint from "./SidebarRestorePoint.astro";
 import { flattenSidebar } from "node_modules/@astrojs/starlight/utils/navigation";
+import { plainLabel, getIconFromLabel } from "@/lib/utils/textConverter";
 
 const { sublist, nested } = Astro.props;
 ---
@@ -18,14 +19,14 @@ const { sublist, nested } = Astro.props;
             class:list={[{ large: !nested }, entry.attrs.class]}
             {...entry.attrs}
           >
-            {entry.label.match(/\[(.*?)\]/)?.[1] && (
+            {getIconFromLabel(entry.label) && (
               <Icon
-                name={entry.label.match(/\[(.*?)\]/)?.[1]}
+                name={getIconFromLabel(entry.label) as any}
                 size="1.3rem"
                 class="mr-2.5"
               />
             )}
-            <span>{entry.label.replace(/\[.*?\]/g, "")}</span>
+            <span>{plainLabel(entry.label)}</span>
             {entry.badge && (
               <Badge
                 variant={entry.badge.variant}
@@ -44,9 +45,9 @@ const { sublist, nested } = Astro.props;
             <SidebarRestorePoint />
             <summary>
               <span class="group-label">
-                {entry.label.match(/\[(.*?)\]/)?.[1] && (
+                {getIconFromLabel(entry.label) && (
                   <Icon
-                    name={entry.label.match(/\[(.*?)\]/)?.[1]}
+                    name={getIconFromLabel(entry.label) as any}
                     size="1.3rem"
                     class="mr-2.5"
                     color={
@@ -57,7 +58,7 @@ const { sublist, nested } = Astro.props;
                   />
                 )}
 
-                <span class="large">{entry.label.replace(/\[.*?\]/g, "")}</span>
+                <span class="large">{plainLabel(entry.label)}</span>
                 {entry.badge && (
                   <Badge
                     variant={entry.badge.variant}

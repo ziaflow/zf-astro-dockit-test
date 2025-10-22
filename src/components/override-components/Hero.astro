@@ -13,10 +13,9 @@ function getFirstHref(item: any): string | null {
   }
   return null; // No valid href found
 }
-// chekc if home page
-const isHomePage = Astro.url.pathname === "/";
 
-
+// check if 404 page
+const is404 = Astro.locals.starlightRoute?.id === "404";
 ---
 
 <div
@@ -26,7 +25,7 @@ const isHomePage = Astro.url.pathname === "/";
   {tagline && <p set:html={tagline} class="text-xl text-center" />}
 
   {
-    isHomePage && (
+    !is404 && (
       <div class="mt-12 max-w-4xl">
         <div class="search-container rounded-2xl p-2 mb-6">
           <div class="search-bar">
