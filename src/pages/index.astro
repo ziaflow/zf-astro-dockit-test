@@ -27,12 +27,15 @@
         gap: 2rem;
       }
       .hero-img {
-        width: 320px;
-        height: 220px;
-        object-fit: cover;
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
         border-radius: 1rem;
-        background: #e5e7eb;
         box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        transition: transform 0.3s ease;
+      }
+      .hero-img:hover {
+        transform: scale(1.05);
       }
       .hero-content {
         flex: 1;
@@ -96,14 +99,19 @@
   </head>
   <body>
     <section class="hero">
-      <img src="/hero.jpg" alt="Hero" class="hero-img" loading="lazy" />
+      <img 
+        src="https://i0.wp.com/ziaflow.com/wp-content/uploads/2025/06/ziaflow_com_updated.png?resize=150%2C150&ssl=1" 
+        alt="Ziaflow Logo" 
+        class="hero-img" 
+        loading="lazy" 
+      />
       <div class="hero-content">
-        <h1>Welcome to Dockit Astro!</h1>
-        <p>Your Astro-powered documentation site is ready. Start building your next project with speed and flexibility.</p>
+        <h1>Welcome to Ziaflow!</h1>
+        <p>Your trusted partner in innovative solutions. Start building your next project with speed and flexibility.</p>
       </div>
     </section>
     <section class="form-section">
-      <form name="contact" method="POST" netlify>
+      <form name="contact" method="POST" data-netlify="true">
         <div>
           <label for="firstName">First Name</label>
           <input type="text" id="firstName" name="firstName" required />
