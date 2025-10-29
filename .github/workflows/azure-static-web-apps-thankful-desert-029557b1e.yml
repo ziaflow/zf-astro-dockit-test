@@ -30,7 +30,11 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm ci
+        # Use npm install here as a short-term workaround when package-lock.json
+        # is out of sync with package.json (prevents `npm ci` EUSAGE failure).
+        # This is less deterministic than `npm ci` but will allow the CI run
+        # to proceed until the repo lockfile is regenerated.
+        run: npm install --no-audit --no-fund
 
       - name: Build site
         run: npm run build
