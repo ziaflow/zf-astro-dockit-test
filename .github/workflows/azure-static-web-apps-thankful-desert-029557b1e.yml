@@ -14,34 +14,29 @@ jobs:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
-    permissions:
-       id-token: write
-       contents: read
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
-
-      # Use a supported Node version for Astro
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-
+          node-version: '20'
       - name: Install dependencies
-        # Use npm install here as a short-term workaround when package-lock.json
-        # is out of sync with package.json (prevents `npm ci` EUSAGE failure).
-        # This is less deterministic than `npm ci` but will allow the CI run
-        # to proceed until the repo lockfile is regenerated.
-        run: npm install --no-audit --no-fund
-
+        run: npm ci --no-audit --no-fund
       - name: Build site
         run: npm run build
-
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_THANKFUL_DESERT_029557B1E }}
+          action: "upload"
+          app_location: "/"
+          api_location: ""
+          output_location: "dist"
+          ###### End of Repository/Build Configurations ######
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_THANKFUL_DESERT_029557B1E }}
           action: "upload"
