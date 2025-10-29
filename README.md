@@ -37,11 +37,11 @@ Edit `src/config/config.json`:
 ```json
 {
   "site": {
-    "title": "Your Documentation Site",
-    "description": "Your site description",
-    "author": "Your Name",
-    "email": "your.email@example.com",
-    "base_url": "https://yourdomain.com"
+    "title": "ZiaFlow",
+    "description": "Your Partner in Digital Transformation",
+    "author": "Jeremy Sanchez",
+    "email": "info@ziaflow.com",
+    "base_url": "https://ziaflow.com"
   }
 }
 ```
