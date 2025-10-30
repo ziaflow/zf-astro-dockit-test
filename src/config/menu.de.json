@@ -9,6 +9,10 @@
       "url": "/de/getting-started/introduction/overview/"
     },
     {
+      "name": "Dienste",
+      "url": "/services"
+    },
+    {
       "name": "Referentie",
       "url": "",
       "hasChildren": true,
